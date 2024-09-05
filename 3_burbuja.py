@@ -4,7 +4,9 @@ def ordenamiento_burbuja(lista):
     n = len(lista)
     
     # obtenemos la longitud de la lista para iterar en ella
+    # recorremos la lista n veces
     for i in range(n):
+        # recorremos la lista n veces otra vez
         for j in range(0, n - i - 1):
             # comparamos elementos adjacentes, si el primero es mayor, lo intercambiamos
             if lista[j] > lista[j + 1]:
@@ -20,4 +22,11 @@ if __name__ == '__main__':
     print(lista)
     
     lista_ordenada = ordenamiento_burbuja(lista)
-    print(lista_ordenada)
+    print(f'Esta es la lista ordenada: {lista_ordenada}')
+    
+'''
+
+El patron para saber que complejidad tiene son los dos for y uno anidado en el otro
+es O(n^2)
+
+'''

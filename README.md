@@ -202,3 +202,25 @@ Preguntate
 Aqui hay un gran trade off, podemos cambiar tiempo por espacio, para optimizar tiempo es probable que tengamos que gastar mas memoria. Es complejo tener lo bueno de ambos conceptos.
 
 ### Cual es el peor caso?
+
+# Algoritmos de Ordenaciones != algoritmos de busqueda
+
+## Ordenamiento de burbuja o bubble sort
+
+Es uno de los mas intuitivos, es un algoritmo que recorre repetidamente una lista que necesita ordenarse, comparaw elementos adyacentes y los intercambia si es estan en desorden. Este procedimiento se repite hasta que no se requiren mas intercambios, lo que indica que la lsita se encuentra ordenada.
+
+Recorreremos la lista y compararemos cada elemento, y su uno es mas grande que el otro, los ordenaremos. Se recorre la lista, n por n, es deicr, el tamanio de elementos e slas veces que se recorrera.
+
+Es importante tener una visualizacion de lo que va a pasar.
+
+### Caracteristicas y ventajas
+
+Despues de la primera ronda, tenemos al garantia de que el elemento mas grande se encuentra hasta el final.
+
+Una ventaja es que si buscamos el elemento mas grande, con bubble sort nos aseguramos que al final del primer ciclo, tendremos el valor mas grande hasta al final.
+
+Recorremos la lista n veces, n veces
+
+### Cual es la complejidad algoritmica
+
+Pienso O(n^2)
