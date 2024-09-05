@@ -180,3 +180,25 @@ Lo mas importante para un computer scientist es poder reducir un problema a un p
 Es ver cada uno de los elementos en un array y ver si podemos identificar x elemento en un array ordenado o no ordenado
 
 ### Cual es el peor caso o BigO de este tipo de algoritmos?
+
+Seria O(n)
+
+## Busqueda Binaria
+
+a. Divide y conquista
+b. El problema se divide en 2 en cada iteracion
+c. Cual es el peor caso?
+
+Se hace el problema cada vez mas pequenio hasta llegar a la solucion, se divide entre dos en cada iteracion y asume que el algoritmo esta ordenado, pero no existe un buen algoritmo para poder ordenar.
+
+Pero, debemos ordenar para luego hacer la busqueda?
+
+Si vas a usar muchas veces tu algoritmo, peude que valga la pena, porque amortizamos el costo de la busqueda, porque podremos usar un codigo muy eficiente de busqueda, que es la busqueda ordinaria.
+
+Preguntate
+
+### Esta ordenada la lista?
+
+Aqui hay un gran trade off, podemos cambiar tiempo por espacio, para optimizar tiempo es probable que tengamos que gastar mas memoria. Es complejo tener lo bueno de ambos conceptos.
+
+### Cual es el peor caso?
