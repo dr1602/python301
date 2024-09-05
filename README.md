@@ -166,3 +166,17 @@ Por cada llamada de fibonacci, llammamos dos llamadas de funciones. 2 por cada n
 Primeros segmentos de BigO.
 
 Una funcion recursiva que genera mas de una llamada recursiva,se puede tener un crecimiento exponencial.
+
+# Complejidad Algoritmica
+
+# Algoritmos de busqueda y ordenacion (Busqueda lineal)
+
+Aplicar los conceptos de complejidad algoritmica, y existen varios algoritmos para resolver un problema.
+
+Lo mas importante para un computer scientist es poder reducir un problema a un problema del que ya sabemos su resolucion.
+
+## Busqueda lineal
+
+Es ver cada uno de los elementos en un array y ver si podemos identificar x elemento en un array ordenado o no ordenado
+
+### Cual es el peor caso o BigO de este tipo de algoritmos?
