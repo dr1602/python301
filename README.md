@@ -75,47 +75,94 @@ con esto podemos ver el crecimiento de nuestra funcion, en este caso, es un poli
 
 1002 + 100 + 2\*(100)^2
 
-Aquí tienes el texto corregido:
+Los terminos que de verdad importan son los mas grandes, esta es una medida es una gran aproximacion para tener una ecuacion para medir el tiempo, porque los terminos no important conforme el problema se hace mas grande y se acerca al infinito.
 
-Abstracción
-Tomar el tiempo no es razonable para medir T(n); será mejor aproximar.
+Para esto veremos el big O notacion para olvidarnos de los terminos que no estan sirviendo para poderlo determinar con el termino que nos importa.
 
-Con una función f(x), tenemos que contar los pasos que tenemos dentro de un programa:
+Ahora podriamos comparar estos polinomios con los polinomios de otras funciones pero aun tenemos otros terminos que no nos estan importando y nos distraen de la solucion correcta para comprar rapidamente los tipos de algoritmos
 
-py
-Copiar código
-def f(x):
-respuesta = 0
+# Notacion asintotica
 
-    for i in range(1000):
-        respuesta += 1
+Big O Notation que nos permite encuadrar cada uno de los algoritmos que veamos en una de las clases que permiten compararlo para entender de entrada como nuestro algoritmo va a crecer
 
-    for i in range(x):
-        respuesta += x
+## Crecimiento asintotico
 
-    for i in range(x):
-        for j in range(x):
-            respuesta += 1
-            respuesta += 1
+Asintotico quiere decir conforme algo crece hacia al infinito, como se comporta una funcion conforme crece hacia el infinito.
 
-    return respuesta
+a. No importan las varaciones pequenias
+b. El enfoque se centra en lo que pasa conforme el tamanio del problema se acerca al infinito.
+c. Mejor de los casos, promedio y peor de los casos. Lo que sirve mejor es el peor de los casos.
+d. Big O, que lo define el termino de mayor tamanio.
+e. Nada mas importa el termino de mayor tamanio.
 
-No importa cuál sea el tamaño de x; el código correrá 1000 veces por el primer for. Entre más crezca x, más iteraciones deberá hacer.
+## Ley de la suma
 
-Luego, hay un bucle dentro de otro bucle. En este caso, por cada iteración de i, el bucle j se repetirá, lo que será x \* x = x²; en este caso, 2x².
+```py
 
-Para saber qué pasa en el código, podemos contar: 1 1000 x 2x²
+def f(n):
+    for i in range(n):
+        print(i)
 
-En total:
+    for i in range(n):
+        print(i)
 
-1002 + x + 2x²
+```
 
-Con esto, podemos ver el crecimiento de nuestra función. En este caso, es un polinomio. Podría parecer que lo que más pesa es la constante, pero entre más crezca, esto no será correcto. Veamos el caso de x = 100:
+### O(n) + O(n) = O(n + n) = O(2n) = O(n)
 
-1002 + 100 + 2 \* (100)²
+La funcion crece en O(n), O de N.
 
-Los términos que de verdad importan son los más grandes. Esta es una gran aproximación para tener una ecuación para medir el tiempo, porque los términos menos importantes desaparecen conforme el problema se hace más grande y se acerca al infinito.
+```py
 
-Para esto, veremos la notación Big O, que nos permite olvidarnos de los términos que no son significativos para poder determinar el comportamiento del algoritmo usando el término que más importa.
+def f(n):
+    for i in range(n):
+        print(i)
 
-Ahora podríamos comparar estos polinomios con los polinomios de otras funciones, pero aún tenemos otros términos que no nos importan y que nos distraen de la solución correcta para comparar rápidamente los tipos de algoritmos.
+    for i in range(n * n):
+        print(i)
+
+```
+
+### O(n) + O(n \* n) = O(n + n^2) = O(n + n^@) = O(n^2)
+
+La funcion crece en O(n^2), O de N cuadrada, es una funcion cuadratica.
+
+## Ley de la multiplicacion
+
+```py
+
+def f(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+
+# se vera como se mueve i con j, los loops no estan al mismo nivel
+```
+
+### O(n) _ O(n) = O(n _ n) = O(n^2)
+
+La funcion crece en O(n^2), O de N cuadrada, es una funcion cuadratica.
+
+Lo importante es poder identificar estos patrones. Con un loop tengo uno lineal, si es un loop dentro de otro loop es probablemente cuadratico.
+
+## Ley de la multiplicacion
+
+```py
+
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return 1
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+```
+
+### O(2^n)
+
+La funcion crece en O(2^n).
+
+Por cada llamada de fibonacci, llammamos dos llamadas de funciones. 2 por cada n. Esto no escala, se tiene un crecimiento exponencial.
+
+Primeros segmentos de BigO.
+
+Una funcion recursiva que genera mas de una llamada recursiva,se puede tener un crecimiento exponencial.
