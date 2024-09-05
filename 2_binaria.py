@@ -1,8 +1,14 @@
 import random
 
-def busqueda_binaria(lista, inicio, final, objetivo):
+def busqueda_binaria(lista, inicio, final, objetivo, contador):
     # haremos un print statement para saber que sucede dentro
     print(f'buscando {objetivo} entre {lista[inicio]} y {lista[final-1]}')
+    
+    # contador
+    contador += 1
+    print(f'Las veces que se ha ejecutado el código son: {contador}')
+    
+    # llamada recursiva
     if inicio > final:
         return False
 
@@ -10,13 +16,14 @@ def busqueda_binaria(lista, inicio, final, objetivo):
     
     # si el valor buscado es igual que la mitad
     if lista[medio] == objetivo:
-        return True
+        return True, contador
     # si el valor buscado es mayor que la mitad
     elif lista[medio] < objetivo:
-        return busqueda_binaria(lista, medio + 1, final, objetivo)
+        return busqueda_binaria(lista, medio + 1, final, objetivo, contador )
     # si el valor buscado es menor que la mitad
     elif lista[medio] > objetivo:
-        return busqueda_binaria(lista, inicio, medio - 1, objetivo)
+        return busqueda_binaria(lista, inicio, medio - 1, objetivo, contador )
+
 
 if __name__ == '__main__':
     tamano_de_lista = int(input('De que tamano sera la lista?: '))
@@ -27,7 +34,7 @@ if __name__ == '__main__':
     lista = sorted([random.randint(0, 100) for i in range(tamano_de_lista)])
     
     # usaremos indices para recorrer la lista, en lugar de solo hacer listas mas pequenias
-    encontrado = busqueda_binaria(lista, 0, len(lista), objetivo)
+    encontrado = busqueda_binaria(lista, 0, len(lista), objetivo, 0)
     print(lista)
     print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"} en la lista')
     

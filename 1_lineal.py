@@ -2,8 +2,10 @@ import random
 
 def busqueda_lineal(lista, objetivo):
     match = False
-    
-    for elemento in lista: #O(n)
+    i = 0
+    for elemento in lista: #O(n)  
+        i += 1
+        print(f'Las veces que se ha ejecutado el codigo son: {i}')
         if elemento == objetivo:
             match = True
             break
