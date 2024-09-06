@@ -317,3 +317,45 @@ Problemas del milenio por Un millón de dólares
 diferencia de np contra np, sin son iguales o no son iguales o son diferentes, o son diferentes te ganas el turin award.
 
 Estudiar Travelling Sales Man.
+
+# El problema del morral
+
+Un ladron en un museo, con solo un morral para llevarse cosas pero con mas cosas de las que puede cargar. Que cosas puede llevarse para garantizar que se puede llevar el mayor valor posible?
+
+## 1-0 valor del morral
+
+No se pueden dividir los objetos, en este caso, pero en la programacion dinamica si se podria.
+
+Este problema se puede resolver con greedy algorythms, nosotros escogemos los 1ro mas alto, luego lo 2do mas alto, etc, pero como no los podemos partir no podemos usar greedy algo.
+
+Un ejemplo seria el oro molido, plata molida y al final el arroz, pero aqui no aplica porque no se pueden subdividir los elementos.
+
+Funcion recursiva para solucionar este problema de manera eficiente, o la modalidad de problema que vemos es 1-0 valor del morral.
+
+## que complejidad tiene?
+
+Como es una funcion recursiva es probable que sea O(n^n)
+
+Por cierto, este algoritmo es reutilizable:
+
+```py
+
+def morral(tamano_morral, pesos, valores, n):
+    # n es indice del morral donde estamos trabajando
+    # hay que pensar en nuestro caso base al ser recursivo
+    # en python no hay problema pues tiene un break interno
+    # pero para otros programas es como tener un whil einfinito
+
+    # si no mas elementos o morral lleno ya no puedo regresar valores
+    if n == 0 or tamano_morral == 0:
+        return 0
+
+    # si peso de elemento n es mayor que el morral
+    if pesos[n - 1] > tamano_morral:
+        # checamos el siguiente elemento sin hacer el morral mas chico
+        return morral(tamano_morral, pesos, valores, n - 1)
+
+    # si si me quedan elementos y espacios tengo que tomar un decision, y si lo meto si es el valor maximo entre meterlo o no meterlo
+    return max(valores[n - 1] + morral(tamano_morral - pesos[n - 1], pesos,valores, n - 1), morral(tamano_morral, pesos, valores, n - 1))
+
+```
