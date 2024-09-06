@@ -236,3 +236,31 @@ Los codigos hasta ahora son relativamente sencillos pero merge sort es un poco m
 Se divide constante a la mitada hasta ser indivisible, luego se compara en cantidades iguales para luego ser ordenado, y esta operacion se repite hasta devolver la cadena de longitud original pero ordenada.
 
 No solo es el algoritmo, sino poder ver el algoritmo O(nlogn)
+
+# Ambientes virtuales
+
+a. Permiten aislar el ambiente para poder instalar diversas versiones de paquetes
+b. A partir de python3 se incluye en la libreria estandar en el modulo venv
+c. Ningun ingeniero profesional de Python trabaja sin ellos
+
+```sh
+mkdir graficado
+cd graficado
+python3 -m venv env
+source env/bin/activate
+
+pip install bokeh
+pip freeze
+
+deactivate
+```
+
+no instalar de manera global, siempre de manera local
+
+# Graficar
+
+Por que es importante graficar?
+
+a. Reconocer patrones
+b. Prediccion de una serie
+c. Simplifica la interpretacion y las conclusiones acerca de los datos
