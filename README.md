@@ -264,3 +264,26 @@ Por que es importante graficar?
 a. Reconocer patrones
 b. Prediccion de una serie
 c. Simplifica la interpretacion y las conclusiones acerca de los datos
+
+# Graficado Simple
+
+a. Bokeh permite construir graficas complejas de manera rapida y con comandos simples
+b. Permite exportar a varios formatos como html, notebooks, imagenes, etc
+c. Bokeh se puede utilizar en el servidor con Flask y Django
+
+Hay que determinar para que queremos la visualizacion, incluso si es programatica para que la vean los usuarios.
+
+Para Bokeh, se puede hacer aqui:
+https://docs.bokeh.org/en/latest/
+
+Tiene multiplicidad de graficos pero eso tiene sus riegos, hay que seleccionar correctamente el tipo de grafico. No porque se puede hacer algo, quiere decir que sea la forma correcta.
+
+Para poder ver las gráficas:
+
+```sh
+
+sudo apt-get update
+sudo apt-get install firefox
+BROWSER=firefox python3 6_graphs.py
+
+```
