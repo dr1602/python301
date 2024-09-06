@@ -224,3 +224,15 @@ Recorremos la lista n veces, n veces
 ### Cual es la complejidad algoritmica
 
 Pienso O(n^2)
+
+## Ordanamiento por mezcla
+
+Es un algoritmo de divide y conquitsa. Primero divide una lista en partes iguales hasta que quedan sublistas de 1 o 0 elementos. Luego las recombina en forma ordenada
+
+Cuando una lista tiene cero elementos, esta ordenada por definicion, luego se comparan las listas cada vez mas pequenias y mas pequenias hasta que tenemos una lista totalmente ordenada. Fue creada por Newman.
+
+Los codigos hasta ahora son relativamente sencillos pero merge sort es un poco mas dificil de comprender, por eso es importante dominar conceptualmente primero.
+
+Se divide constante a la mitada hasta ser indivisible, luego se compara en cantidades iguales para luego ser ordenado, y esta operacion se repite hasta devolver la cadena de longitud original pero ordenada.
+
+No solo es el algoritmo, sino poder ver el algoritmo O(nlogn)

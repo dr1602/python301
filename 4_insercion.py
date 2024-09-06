@@ -15,8 +15,6 @@
 
 '''
 
-numbers = [7, 3, 2, 9, 8]
-
 def insertion(list):
     base_index = 0
     current_index = 1
@@ -34,9 +32,7 @@ def insertion(list):
             current_index += 1
             reversed_current_index = current_index
     
-    print(list)
-
-insertion(numbers)
+    return list
 
 ## guide
 
@@ -53,3 +49,8 @@ def ordenamiento_por_insercion(lista):
         lista[posicion_actual] = valor_actual
         
 
+if __name__ == '__main__':
+    numbers = [7, 3, 2, 9, 8]
+    
+    lista_ordenada = insertion(numbers)
+    print(f'Esta es la lista ordenada: {lista_ordenada}')
