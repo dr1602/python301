@@ -287,3 +287,33 @@ sudo apt-get install firefox
 BROWSER=firefox python3 6_graphs.py
 
 ```
+
+# Optimizacion
+
+a. El concepto de optimizacion permite resolver muchos problemas de manera computacional
+b. Una funcion objetivo que debemos maximizar o minimizar
+c. Una serie de limitantes que debemos respetar
+
+Para problemas computacionales, muchos de los problemas del mundo se pueden reducir a algoritmos de maximizacion y minimizacion.
+
+Siempre se pueden tener limitantes, o constrains, por ejemplo optimizar vuelos, el vuelo mas barato dentro de ciertas fechas y sin escalas y que este cerca de salidas de emergencia.
+
+Si los resuelves puedes tener empresas billonarias, como waze que resuleve el algoritmo del trafico.
+
+Un problema famoso es el travelling salesman, buscar la ruta mas eficiente para recorrer todas las ciudades, hoy en dia no existe un problema que lo pueda resolver.
+
+Serian algoritmos O(n np)
+
+Problemas del milenio por Un millón de dólares
+
+    P versus NP
+    La conjetura de Hodge
+    La conjetura de Poincaré
+    La hipótesis de Riemann
+    Existencia de Yang-Mills y del salto de masa
+    Las ecuaciones de Navier-Stokes
+    La conjetura de Birch y Swinnerton-Dyer
+
+diferencia de np contra np, sin son iguales o no son iguales o son diferentes, o son diferentes te ganas el turin award.
+
+Estudiar Travelling Sales Man.
