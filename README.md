@@ -359,3 +359,16 @@ def morral(tamano_morral, pesos, valores, n):
     return max(valores[n - 1] + morral(tamano_morral - pesos[n - 1], pesos,valores, n - 1), morral(tamano_morral, pesos, valores, n - 1))
 
 ```
+
+# Retos
+
+Paginas para retos de python u otros lenguajes. Es importante practicar.
+
+https://www.hackerrank.com
+https://codewars.com
+http://codeforces.com/
+https://coderbyte.com/
+https://www.codingame.com/
+https://www.codechef.com/
+https://www.topcoder.com/challenges/
+https://leetcode.com/problemset/
