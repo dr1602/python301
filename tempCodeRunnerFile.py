@@ -1,23 +1,22 @@
-import random
+numbers = [7, 3, 2, 9, 8]
 
-def ordenamiento_burbuja(lista):
-    n = len(lista)
+def insertion(list):
+    base_index = 0
+    current_index = 1
+    reversed_current_index = 1
+    n = len(list)
     
-    # obtenemos la longitud de la lista para iterar en ella
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            # comparamos elementos adjacentes, si el primero es mayor, lo intercambiamos
-            if lista[j] > lista[j + 1]:
-                # destructuracion de lista en las posiciones j y j + 1 para ordenarlos inversamente
-                lista[j], lista[j + 1] = lista[j + 1], lista[j]
-                
-    return lista
+    while n > current_index:
+        if list[current_index - 1] > list [current_index]:
+            while reversed_current_index > base_index and list[reversed_current_index - 1] > list [reversed_current_index]:
+                list[reversed_current_index - 1], list[reversed_current_index] = list[reversed_current_index], list[reversed_current_index - 1]
+                reversed_current_index -= 1
+            current_index += 1
+            reversed_current_index = current_index
+        else:
+            current_index += 1
+            reversed_current_index = current_index
+    
+    print(list)
 
-if __name__ == '__main__':
-    tamano_de_lista = int(input('De que tamano sera la lista?: '))
-    
-    lista = [random.randint(0, 100) for i in range(tamano_de_lista)]
-    print(lista)
-    
-    lista_ordenada = ordenamiento_burbuja(lista)
-    print(lista_ordenada)
+insertion(numbers)
